@@ -14,8 +14,8 @@ Chatbot da GoTravel, para informar sobre venda de pacotes de viagens, passagens 
 - No arquivo '.env' deve mudar a chave da api para a sua que deve ser criado na api do google gemini;
 - Deve ter o Node.js instalado em seu computador;
 - no terminal rodar os seguintes comandos: 
-  npm install 
-  npm install @google/generative-ai
-  npm install dotenv
-  npm start
+- npm install 
+- npm install @google/generative-ai
+- npm install dotenv
+- npm start
 
