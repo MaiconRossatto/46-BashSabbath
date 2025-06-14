@@ -1,6 +1,6 @@
-# GoTravel
+# LGPDesk
 
-Chatbot da GoTravel, para informar sobre venda de pacotes de viagens, passagens aéreas, hospedagem etc.
+Chatbot  LGPDesk, para auxiliar com as normas da LGPD.
 
 ## Funcionalidades
 
