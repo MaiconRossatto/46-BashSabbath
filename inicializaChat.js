@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
+
 const funcoes = {
   taxaJurosParcelamento: ({ value }) => {
     const meses = typeof value === "string" ? parseInt(value) : value;
@@ -16,46 +17,46 @@ const funcoes = {
   }
 };
 
+
 const tools = [
   {
     functionDeclarations: [
       {
         name: "taxaJurosParcelamento",
-        description: "Retorna a taxa de juros para parcelamento baseado na quantidade de meses",
+        description: "",
         parameters: {
           type: FunctionDeclarationSchemaType.OBJECT,
           properties: {
             value: { type: FunctionDeclarationSchemaType.NUMBER },
           },
           required: ["value"],
-        } 
+        }
       }
     ]
   }
 ];
 
 
+
+
 const model = genAI.getGenerativeModel(
   { model: "gemini-1.5-flash", tools},
   { apiVersion: "v1beta"});
 
+
 let chat;
+
 
 function inicializaChat() {
   chat = model.startChat({
     history: [
       {
         role: "user",
-        parts: [{ text: `Você é o Atlas, um chatbot amigável que representa 
-        a empresa GoTravel, que vende pacotes turísticos para
-        destinos nacionais e internacionais. Você pode responder mensagens 
-        que tenham relação com viagens.` }],
+        parts: [{ text: 'Você é o LGPDesk, um chatbot amigável que tira dúvidas sobre as normas LGPD' }],
       },
       {
         role: "model",
-        parts: [{ text: `Olá! Obrigado por entrar em contato com a GoTravel. 
-        Antes de começar a responder sobre suas dúvidas, preciso do seu nome e 
-        endereço de e-mail.` }],
+        parts: [{ text: 'Olá!' }],
       },
     ],
     generationConfig: {
@@ -63,5 +64,6 @@ function inicializaChat() {
     },
   });
 }
+
 
 export { chat, funcoes, inicializaChat}

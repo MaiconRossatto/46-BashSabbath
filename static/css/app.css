@@ -30,7 +30,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 6rem;
+    height: 9rem;
     border-bottom: 1px solid #080808;
 }
 .cabecalho__acoes {
@@ -231,6 +231,6 @@ a {
 }
 img {
     display: block;
-    width: 216px;
+    width: 148px;
     
 }

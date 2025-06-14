@@ -1,7 +1,7 @@
 import { chat, funcoes } from './inicializaChat.js';
 import { incorporarDocumentos, incorporarPergunta, leArquivos } from './embedding.js';
 
-const arquivos = await leArquivos(["Pacotes_Argentina.txt","Pacotes_EUA.txt", "Politicas.txt"]);
+const arquivos = await leArquivos(["Politicas.txt"]);
 const documentos = await incorporarDocumentos(arquivos);
 
 
